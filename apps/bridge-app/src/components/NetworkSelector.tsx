@@ -1,7 +1,7 @@
 import { useAccount, useConfig, useSwitchChain } from 'wagmi'
 import {
   Button,
-  Separator,
+  // Separator,
   Dialog,
   DialogContent,
   DialogDescription,
@@ -50,7 +50,7 @@ export const NetworkSelector = () => {
   const { chain } = useAccount()
   const { switchChainAsync } = useSwitchChain()
 
-  const mainnets = config.chains.filter((chain) => !chain.testnet)
+  // const mainnets = config.chains.filter((chain) => !chain.testnet)
   const testnets = config.chains.filter((chain) => chain.testnet)
 
   const onSwitchNetwork = useCallback(
@@ -76,7 +76,7 @@ export const NetworkSelector = () => {
       </DialogTrigger>
       <DialogContent className="md:w-auto">
         <DialogHeader>Select Network</DialogHeader>
-        <DialogDescription>
+        {/* <DialogDescription>
           <span className="text-base mb-2">Mainnets:</span>
           {mainnets.map((mainnet) => (
             <NetworkSelectorItem
@@ -88,7 +88,7 @@ export const NetworkSelector = () => {
             />
           ))}
         </DialogDescription>
-        <Separator />
+        <Separator /> */}
         <DialogDescription>
           <span className="text-base mb-2">Testsnets:</span>
           {testnets.map((testnet) => (
