@@ -21,7 +21,10 @@ export const useOPNetwork = ({ type, chainId }: UseOPNetworkArgs) => {
       }
     }
 
-    return { l1: networks.mainnet[0], l2: networks.mainnet[1] }
+    // TODO: hacky code because we don't have any mainnet
+    const network = networks.mainnet || networks.sepolia
+
+    return { l1: network[0], l2: network[1] }
   }, [chainId, type])
 
   return { networkPair }

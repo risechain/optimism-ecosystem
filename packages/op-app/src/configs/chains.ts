@@ -2,6 +2,62 @@
 import { defineChain } from 'viem'
 import { chainConfig } from 'viem/op-stack'
 
+const sepoliaSourceId = 11_155_111
+export const riseSepolia = defineChain({
+  ...chainConfig,
+  id: 11155930,
+  name: 'Rise Sepolia',
+  nativeCurrency: {
+    decimals: 18,
+    name: 'Ether',
+    symbol: 'ETH',
+  },
+  rpcUrls: {
+    default: {
+      http: ['https://testnet.riselabs.xyz'],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Blockscout',
+      url: 'https://testnet-explorer.riselabs.xyz',
+    },
+  },
+  sourceId: sepoliaSourceId,
+  testnet: true,
+  contracts: {
+    ...chainConfig.contracts,
+    // DisputeGameFactoryProxy
+    disputeGameFactory: {
+      [sepoliaSourceId]: {
+        address: '0xC8EfCb4ca76F5FbfA6C629048706D6a9f9792302',
+      },
+    },
+    // L2OutputOracleProxy
+    l2OutputOracle: {
+      [sepoliaSourceId]: {
+        address: '0xf7999b1738C75dbD1c5408F59B577fE9da2b43cF',
+      },
+    },
+    // multicall3: {
+    //   address: '0xca11bde05977b3631167028862be2a173976ca11',
+    //   blockCreated: 1620204,
+    // },
+    // OptimismPortalProxy
+    portal: {
+      [sepoliaSourceId]: {
+        address: '0xb721a449B33c79EFC57BCE30d93b7C8870615AA5',
+      },
+    },
+    // L1StandardBridgeProxy
+    l1StandardBridge: {
+      [sepoliaSourceId]: {
+        address: '0x1e4452C8Cfd7Bfa4Bd9D9c16E3BBd9d5ca0B57cb',
+      },
+    },
+  },
+})
+
 export const orderlyNetwork = defineChain({
   ...chainConfig,
   id: 291,

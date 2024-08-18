@@ -1,1 +1,1 @@
-export const NETWORK_TYPE = 'op'
+export const NETWORK_TYPE = 'rise'
