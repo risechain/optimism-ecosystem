@@ -22,7 +22,7 @@ export function configureOpChains({
   const l1s = pairs.map(([l1, _]) => l1)
   const l2s = pairs.map(([_, l2]) => l2)
 
-  let defaultChain = networkGroup.mainnet[1]
+  let defaultChain = (networkGroup.mainnet || networkGroup.sepolia)[1]
   if (defaultL2ChainId) {
     for (const network of Object.keys(networkGroup)) {
       const [l1, l2] = networkGroup[network]

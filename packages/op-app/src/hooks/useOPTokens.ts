@@ -1,6 +1,7 @@
-import tokenlist from '@eth-optimism/tokenlist'
+// import tokenlist from '@eth-optimism/tokenlist'
 import { useMemo } from 'react'
 
+import { Tokenlist } from '../configs'
 import type { Token } from '../types'
 
 export type UseOPTokenArgs = {
@@ -10,10 +11,10 @@ export type UseOPTokenArgs = {
 export const useOPTokens = ({ chainId }: UseOPTokenArgs) => {
   const tokens = useMemo<Token[]>(() => {
     if (!chainId) {
-      alert(tokenlist.tokens)
-      return tokenlist.tokens as Token[]
+      alert(Tokenlist)
+      return Tokenlist as Token[]
     }
-    return tokenlist.tokens.filter(
+    return Tokenlist.filter(
       (token) => token.chainId === chainId,
     ) as Token[]
   }, [chainId])
