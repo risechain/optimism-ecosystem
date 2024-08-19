@@ -8,13 +8,18 @@ export type HeaderLeftProps = {
 
 export const HeaderLeft = ({ logo }: HeaderLeftProps) => {
   const { theme } = useTheme();
+  const homeUrl = "https://riselabs.xyz";
 
   return (
     <div className="flex logo">
-      <img src={logo} />
+      <a href={homeUrl}>
+        <img src={logo} />
+      </a>
       {theme == "dark" ?
+      <a href={homeUrl}>
         <img className="p-4" src={logoNameLight} />
-      :<img className="p-4" src={logoNameDark} />}
+      </a>
+      :<a href={homeUrl}><img className="p-4" src={logoNameDark} /></a>}
     </div>
   )
 }
