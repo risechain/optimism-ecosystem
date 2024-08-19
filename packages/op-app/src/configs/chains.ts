@@ -5,7 +5,7 @@ import { chainConfig } from 'viem/op-stack'
 const sepoliaSourceId = 11_155_111
 export const riseSepolia = defineChain({
   ...chainConfig,
-  id: 11155930,
+  id: 11155931,
   name: 'Rise Sepolia',
   nativeCurrency: {
     decimals: 18,
@@ -30,13 +30,13 @@ export const riseSepolia = defineChain({
     // DisputeGameFactoryProxy
     disputeGameFactory: {
       [sepoliaSourceId]: {
-        address: '0xC8EfCb4ca76F5FbfA6C629048706D6a9f9792302',
+        address: '0x72d45fdd516A5100EB9D2439a94d1F13D1A54470',
       },
     },
     // L2OutputOracleProxy
     l2OutputOracle: {
       [sepoliaSourceId]: {
-        address: '0xf7999b1738C75dbD1c5408F59B577fE9da2b43cF',
+        address: '0xf785253F351EA3573864e356f5C7e9cF5535F8c1',
       },
     },
     // multicall3: {
@@ -46,13 +46,13 @@ export const riseSepolia = defineChain({
     // OptimismPortalProxy
     portal: {
       [sepoliaSourceId]: {
-        address: '0xb721a449B33c79EFC57BCE30d93b7C8870615AA5',
+        address: '0xF00353D964dDE6cBE33F9f52bD4610C02EcABC29',
       },
     },
     // L1StandardBridgeProxy
     l1StandardBridge: {
       [sepoliaSourceId]: {
-        address: '0x1e4452C8Cfd7Bfa4Bd9D9c16E3BBd9d5ca0B57cb',
+        address: '0x1E499bFc413914595168069F1372D9131AFD29eA',
       },
     },
   },

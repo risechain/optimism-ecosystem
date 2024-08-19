@@ -96,7 +96,7 @@ const ReviewDepositDialogContent = ({
           to: address as Address,
           amount: txData.amount,
           // TODO: remove hacky code here
-          gasLimit: 100_000,
+          gasLimit: 3_000_000,
         },
         l2ChainId: l2.id,
       })

@@ -69,5 +69,5 @@ export const networkPairsByID: Record<number, [Chain, Chain]> = {
   11155420: [sepolia, optimismSepolia],
   58008: [sepolia, pgnTestnet],
   999999999: [sepolia, zoraSepolia],
-  11155930: [sepolia, riseSepolia],
+  11155931: [sepolia, riseSepolia],
 }
