@@ -1,15 +1,12 @@
 import type { NetworkPair, Token } from '@eth-optimism/op-app'
 
-import {
-  useIsNetworkUnsupported,
-  useSwitchNetworkDirection,
-} from '@eth-optimism/op-app'
-
 import { Button } from '@eth-optimism/ui-components'
 import { useAccount } from 'wagmi'
 import { Chain, parseEther } from 'viem'
 import { ReviewDepositDialog } from '@/components/bridge/ReviewDepositDialog'
 import { ReviewWithdrawalDialog } from '@/components/bridge/ReviewWithdrawalDialog'
+import { useIsNetworkUnsupported } from '@/hooks/useIsNetworkUnsupported'
+import { useSwitchNetworkDirection } from '@/hooks/useSwitchNetworkPair'
 
 export type BridgeSubmitButtonProps = {
   action: 'deposit' | 'withdrawal'

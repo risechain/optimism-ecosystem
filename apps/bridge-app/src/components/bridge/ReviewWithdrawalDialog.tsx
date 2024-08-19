@@ -7,7 +7,6 @@ import {
 } from '@eth-optimism/ui-components'
 import { useWriteWithdrawERC20, useWriteWithdrawETH } from 'op-wagmi'
 import type { Token } from '@eth-optimism/op-app'
-import { useOPWagmiConfig } from '@eth-optimism/op-app'
 
 import {
   Address,
@@ -30,6 +29,7 @@ import { NETWORK_TYPE } from '@/constants/networkType'
 import { l2StandardBridgeABI, predeploys } from '@eth-optimism/contracts-ts'
 import { useERC20Allowance } from '@/hooks/useERC20Allowance'
 import { MAX_ALLOWANCE } from '@/constants/bridge'
+import { useOPWagmiConfig } from '@/hooks/useOPWagmiConfig'
 
 export type ReviewWithdrawalDialogProps = {
   l1: Chain

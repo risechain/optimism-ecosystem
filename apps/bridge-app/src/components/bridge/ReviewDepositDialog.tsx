@@ -6,8 +6,7 @@ import {
   Button,
 } from '@eth-optimism/ui-components'
 import { useWriteDepositERC20, useWriteDepositETH } from 'op-wagmi'
-import type { Token } from '@eth-optimism/op-app'
-import { useOPWagmiConfig, deploymentAddresses } from '@eth-optimism/op-app'
+import { deploymentAddresses, type Token } from '@eth-optimism/op-app'
 
 import {
   Address,
@@ -32,6 +31,7 @@ import {
 } from '@eth-optimism/contracts-ts'
 import { ERC20_DEPOSIT_MIN_GAS_LIMIT, MAX_ALLOWANCE } from '@/constants/bridge'
 import { useERC20Allowance } from '@/hooks/useERC20Allowance'
+import { useOPWagmiConfig } from '@/hooks/useOPWagmiConfig'
 
 export type ReviewDepositDialogProps = {
   l1: Chain
