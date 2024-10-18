@@ -14,7 +14,7 @@ export const RiseTokens: [Token] = [
     logoURI: "https://ethereum-optimism.github.io/data/ETH/logo.svg",
     extensions: {
       // L1StandardBridgeProxy
-      optimismBridgeAddress: "0x1E499bFc413914595168069F1372D9131AFD29eA",
+      optimismBridgeAddress: "0xB525dF7E8101506D333Dc924Ef802789820E3cEA",
       opListId: "default",
       opTokenId: "ETH"
     }
