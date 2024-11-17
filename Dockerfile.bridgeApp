@@ -32,6 +32,9 @@ COPY . ./
 # install monorepo dependencies, from the virtual store
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile --prefer-offline
 
+ARG VITE_WALLET_CONNECT_PROJECT_ID
+ENV VITE_WALLET_CONNECT_PROJECT_ID=$VITE_WALLET_CONNECT_PROJECT_ID
+
 # build all apps we want to deploy
 RUN pnpm nx run @eth-optimism/bridge-app:build
 
@@ -39,14 +42,12 @@ RUN pnpm nx run @eth-optimism/bridge-app:build
 #
 # note: unexpected behavior of pnpm deploy (that will hopefully be fixed)
 # - it ignores /dist folder because it is listed in the local gitignore. Have to add "dist" folder explicitly to "files" in package.json to include. (https://github.com/pnpm/pnpm/issues/7286)
-RUN pnpm deploy --filter=bridge-app --prod /prod/bridge-app
+RUN cp -r apps/bridge-app/dist /bridge-app
 
-FROM base AS runtime
+FROM nginx:alpine AS runtime
 
-COPY --from=builder /prod/bridge-app /prod/bridge-app
-WORKDIR /prod/bridge-app
+COPY --from=builder /bridge-app /usr/share/nginx/html
 
-# Public port, Admin api port
-EXPOSE 7310 9900
+EXPOSE 80
 
-CMD [ "npm", "run", "preview" ]
+CMD ["nginx", "-g", "daemon off;"]
