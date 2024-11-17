@@ -28,7 +28,7 @@ jobs:
         uses: ./.github/actions/setup
       - name: Run TypeChecker
         run: |
-          pnpm nx affected --base=$NX_BASE --head=$NX_HEAD --target=typecheck
+          pnpm nx affected --target=typecheck
 
   lint:
     runs-on: ubuntu-latest
@@ -43,7 +43,7 @@ jobs:
         uses: ./.github/actions/setup
       - name: Run Linters
         run: |
-          pnpm nx affected --base=$NX_BASE --head=$NX_HEAD --target=lint
+          pnpm nx affected --target=lint
 
   test:
     runs-on: ubuntu-latest
@@ -60,4 +60,4 @@ jobs:
         uses: ./.github/actions/supersim
       - name: Run Tests
         run: |
-          pnpm nx affected --base=$NX_BASE --head=$NX_HEAD --target=test
+          pnpm nx affected --target=test
