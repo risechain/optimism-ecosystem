@@ -12,9 +12,9 @@ export const HeaderLeft = ({ logo }: HeaderLeftProps) => {
 
   return (
     <div className="flex logo">
-      {/* <a href={homeUrl}>
+      <a className="hidden" href={homeUrl}>
         <img src={logo} />
-      </a> */}
+      </a>
       {theme == "dark" ?
       <a href={homeUrl}>
         <img className="p-4 logo-img" src={logoNameLight} />
