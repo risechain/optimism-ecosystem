@@ -90,4 +90,8 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .logo-img {
+    height: 80px;
+  }
 }

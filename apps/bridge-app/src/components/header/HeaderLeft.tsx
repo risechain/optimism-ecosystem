@@ -12,14 +12,14 @@ export const HeaderLeft = ({ logo }: HeaderLeftProps) => {
 
   return (
     <div className="flex logo">
-      <a href={homeUrl}>
+      {/* <a href={homeUrl}>
         <img src={logo} />
-      </a>
+      </a> */}
       {theme == "dark" ?
       <a href={homeUrl}>
-        <img className="p-4" src={logoNameLight} />
+        <img className="p-4 logo-img" src={logoNameLight} />
       </a>
-      :<a href={homeUrl}><img className="p-4" src={logoNameDark} /></a>}
+      :<a href={homeUrl}><img className="p-4 logo-img" src={logoNameDark} /></a>}
     </div>
   )
 }
