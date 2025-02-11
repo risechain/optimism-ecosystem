@@ -1,5 +1,9 @@
 import { predeploys } from '@eth-optimism/contracts-ts'
-import { deploymentAddresses, NetworkType, OpConfig } from '@eth-optimism/op-app'
+import {
+  deploymentAddresses,
+  NetworkType,
+  OpConfig,
+} from '@eth-optimism/op-app'
 import { useMemo } from 'react'
 import { useConfig } from 'wagmi'
 import { useOPNetwork } from '@/hooks/useOPNetwork'

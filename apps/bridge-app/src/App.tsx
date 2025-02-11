@@ -74,7 +74,7 @@ const AppRoot = () => {
     <Providers>
       <div className={classNames.app}>
         <Layout
-          headerLeft={ <HeaderLeft logo={logo}/>}
+          headerLeft={<HeaderLeft logo={logo} />}
           headerRight={<HeaderRight />}
         >
           <Outlet />
@@ -96,7 +96,7 @@ const router = createBrowserRouter([
     element: <AppRoot />,
     children: [
       { index: true, element: <Bridge action="deposit" /> },
-      { path: '/bridge', children: bridgeRoutes},
+      { path: '/bridge', children: bridgeRoutes },
     ],
   },
 ])
