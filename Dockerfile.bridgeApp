@@ -5,6 +5,7 @@ ENV PATH="$PNPM_HOME:$PATH"
 # corepack depends on packageManager field in package.json
 COPY package.json ./
 
+RUN npm install --global corepack@latest
 RUN corepack enable
 
 ########################################
