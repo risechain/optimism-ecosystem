@@ -14,9 +14,7 @@ export const useOPTokens = ({ chainId }: UseOPTokenArgs) => {
       alert(Tokenlist)
       return Tokenlist as Token[]
     }
-    return Tokenlist.filter(
-      (token) => token.chainId === chainId,
-    ) as Token[]
+    return Tokenlist.filter((token) => token.chainId === chainId) as Token[]
   }, [chainId])
 
   const ethToken = useMemo<Token>(() => {

@@ -1,4 +1,8 @@
-import { NetworkPair, networkPairsByGroup, NetworkType } from '@eth-optimism/op-app'
+import {
+  NetworkPair,
+  networkPairsByGroup,
+  NetworkType,
+} from '@eth-optimism/op-app'
 import { useMemo } from 'react'
 
 // RISE TODO: Resolve the duplication from op-app.
