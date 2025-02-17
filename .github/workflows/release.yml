@@ -43,9 +43,11 @@ jobs:
           echo "Configuring Docker to authenticate with GCP Artifact Registry..."
           gcloud auth configure-docker ${{ secrets.GCP_ARTIFACT_REGISTRY_REGION }}-docker.pkg.dev
 
+      # Set up Docker Buildx
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      # Config Docker Buildx
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
@@ -57,7 +59,9 @@ jobs:
             type=ref,event=pr
             type=semver,pattern={{version}}
             type=sha
+            type=raw,value=latest
 
+      # Build and push the Docker image
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
@@ -71,3 +75,11 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           platforms: linux/amd64,linux/arm64
+
+      # Scan the Docker image with Trivy
+      - name: Scan Docker Image for Vulnerabilities
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: ${{ secrets.GCP_ARTIFACT_REGISTRY_REGION }}-docker.pkg.dev/${{ secrets.GCP_ARTIFACT_PROJECT_ID }}/risechain/bridge-ui:latest
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
