@@ -30,7 +30,7 @@ export const riseSepolia = defineChain({
     // DisputeGameFactoryProxy
     disputeGameFactory: {
       [sepoliaSourceId]: {
-        address: '0x790e18c477bfb49c784ca0aed244648166a5022b',
+        address: '0xc6c2e2219ff04bf4bad014e9fc5927d9ba8fabd0',
       },
     },
     // L2OutputOracleProxy
@@ -46,13 +46,13 @@ export const riseSepolia = defineChain({
     // OptimismPortalProxy
     portal: {
       [sepoliaSourceId]: {
-        address: '0x77cce5cd26c75140c35c38104d0c655c7a786acb',
+        address: '0x0c0b82d89b10d8f03fa9af03f2872d8a2f661c68',
       },
     },
     // L1StandardBridgeProxy
     l1StandardBridge: {
       [sepoliaSourceId]: {
-        address: '0xe9a531a5d7253c9823c74af155d22fe14568b610',
+        address: '0xbcd160602c4fd749261d339fbe40157cd61da707',
       },
     },
   },
