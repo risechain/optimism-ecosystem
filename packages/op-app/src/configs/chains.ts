@@ -14,13 +14,13 @@ export const riseSepolia = defineChain({
   },
   rpcUrls: {
     default: {
-      http: ['https://testnet.riselabs.xyz'],
+      http: ['https://staging.riselabs.xyz'],
     },
   },
   blockExplorers: {
     default: {
       name: 'Blockscout',
-      url: 'https://testnet-explorer.riselabs.xyz',
+      url: 'https://explorer.staging.riselabs.xyz',
     },
   },
   sourceId: sepoliaSourceId,
