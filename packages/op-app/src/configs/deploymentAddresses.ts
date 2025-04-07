@@ -227,14 +227,14 @@ export const deploymentAddresses: Record<string, DeploymentAddresses> = {
     ProxyAdmin: '0xf592f1730154cE9e3F1793b583582B31A00EFBf1',
   },
   '11155931': {
-    AddressManager: '0xff2e7cafb0afb6f393f52cfafbe061695c3ccd55',
-    L1CrossDomainMessengerProxy: '0x85d2b95c18c2124aedf0f142cd75816f02ea00a5',
-    L1ERC721BridgeProxy: '0xfc7a09c8feb8482b0bf2fa98a44b12b5b331df28',
-    L1StandardBridgeProxy: '0xbcd160602c4fd749261d339fbe40157cd61da707',
+    AddressManager: '0x9643f32683817ed75e97f708db07ef31089eda6e',
+    L1CrossDomainMessengerProxy: '0xa60ce10c77fbe8902a9933b0e8201d09ecc3de8d',
+    L1ERC721BridgeProxy: '0x30817c2ac9c2f73ac9e659e5061de589fd8536a0',
+    L1StandardBridgeProxy: '0x4e32d8d3be0dcee8398859cf513ebcb8f4d490cc',
     L2OutputOracleProxy: '0x0000000000000000000000000000000000000000',
     OptimismMintableERC20FactoryProxy:
-      '0x596096e502f48e56602f20bcbf10c9e591a287b9',
-    OptimismPortalProxy: '0x0c0b82d89b10d8f03fa9af03f2872d8a2f661c68',
-    ProxyAdmin: '0x1e47c0644171ce4cb4d2e06595a143d24e062a5a',
+      '0x18246df88f7802c87e63a783c57397fe54a610f4',
+    OptimismPortalProxy: '0x3da939b2668dbcaddf926809a00c8737a5c15b13',
+    ProxyAdmin: '0xc015f9752dd4fe3d0de242e3475d3838e31afa03',
   },
 }
