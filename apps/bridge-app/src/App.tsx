@@ -42,7 +42,7 @@ if (import.meta.env.VITE_SUPERSIM_ENABLED === 'true') {
 }
 
 const wagmiConfig = getDefaultConfig({
-  appName: 'Rise Bridge',
+  appName: 'RISE Bridge',
   projectId: import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID,
   chains: opChains,
   transports: opChains.reduce(
